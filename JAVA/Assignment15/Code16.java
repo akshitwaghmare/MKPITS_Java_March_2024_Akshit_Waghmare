@@ -1,0 +1,15 @@
+package Assignment15;
+
+import java.util.ArrayList;
+
+public class Code16 {
+    public static void main(String[] args) {
+        ArrayList<Integer> integer = new ArrayList<>();
+        integer.add(25);
+        integer.add(26);
+        integer.add(27);
+        integer.add(28);
+        ArrayList<Integer> integer1 = (ArrayList)integer.clone();
+        System.out.println(integer1);
+    }
+}
