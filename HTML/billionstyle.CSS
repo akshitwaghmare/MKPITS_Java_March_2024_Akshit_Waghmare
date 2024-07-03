@@ -1,0 +1,119 @@
+body {
+    background-color: black;
+    color: white;
+    font-family: Arial, sans-serif;
+    text-align: center;
+}
+
+header {
+    padding: 10px;
+    background-color: black;
+}
+
+nav {
+    background-color: #222;
+    padding: 10px 0;
+    border-style: solid;
+    border-width: thick;
+}
+
+nav ul {
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+    justify-content: center;
+}
+
+nav ul li {
+    margin-right: 20px;
+    
+}
+
+nav ul li a {
+    color: rgb(8, 234, 222);
+    text-decoration: none;
+    font-weight: bold;
+}
+
+nav ul li a:hover {
+    text-decoration: underline;
+}
+
+h1 {
+    color: white;
+    font-size: 40px;
+    text-align: center;
+    margin: 15px;
+    padding: 10px;
+    font-weight: bolder;
+    background-color: black;
+    border-style: solid;
+    border-width: thick;
+    border-color: white;
+}
+
+h2 {
+    color: white;
+    font-size: 30px;
+    text-align: center;
+    margin: 20px;
+    padding: 10px;
+    font-weight: bolder;
+}
+
+h3 {
+    color: rgb(8, 234, 222);
+    font-size: 40px;
+    text-align: center;
+    margin: 20px;
+    padding: 10px;
+    font-weight: bolder;
+}
+
+table.richest-table {
+    margin: 20px auto;
+    width: 80%;
+    border-collapse: collapse;
+}
+
+table.richest-table th, table.richest-table td {
+    padding: 10px;
+    text-align: left;
+}
+
+table.richest-table thead {
+    background-color: #444;
+}
+
+table.richest-table tbody tr:nth-child(even) {
+    background-color: #333;
+}
+
+table.richest-table tbody tr:nth-child(odd) {
+    background-color: #222;
+}
+
+table.richest-table th {
+    font-weight: bold;
+    border-bottom: 2px solid #555;
+}
+
+footer {
+    color: bisque;
+    text-align: center;
+    margin-top: 20px;
+    font-size: 0.8em;
+}
+
+img {
+    animation-name: bounce;
+    animation-duration: 3s;
+    width: 70%;
+    height: 70%;
+}
+
+@keyframes bounce {
+    0% { transform: translateX(-100%); }
+    100% { transform: translateX(0); }
+}
