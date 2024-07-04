@@ -1,0 +1,48 @@
+body {
+    font-family: Arial, sans-serif;
+}
+
+.jumbotron {
+    height: 60vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.card img {
+    height: 200px;
+    object-fit: cover;
+}
+footer{
+    background-color: wheat;
+}
+h2{
+    text-align: center;
+    color: black;
+    font-weight: bolder;
+}
+
+nav{
+    border-style: solid;
+    border-width: thick;
+    border-color: black;
+}
+h1{
+    text-align: center;
+    color: black;
+    font-weight: bolder;
+}
+nav{
+    display: inline;
+}
+w-100{
+    object-fit: cover;
+    height: 100%;
+    width: 100%;
+    display: inline-block;
+    vertical-align: baseline;
+    overflow-clip-margin: content-box;
+    overflow: clip;
+    z-index: -1;
+}
+
