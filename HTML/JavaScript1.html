@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="JavaScript.js"></script>
+</head>
+<body>
+    <center></centre><h1 style="color: blue;">JavaScript</h1></center>
+    <script>
+        //Java Script Object By Object Literal
+        emp={id:102,name:"Akshit",salary:40000}  
+        document.write(emp.id+" "+emp.name+" "+emp.salary);  
+        document.write("<br>")
+        //Java Script Object By Creating Intance Of Object
+        var emp=new Object();
+        emp.id=777;
+        emp.name="Akshit";
+        emp.salary=40000;
+        document.write(emp.id+" "+emp.name+" "+emp.salary);
+        document.write("<br>")
+        //Java Script Object By Using Object Constructor
+        function Student(id,name){
+            this.id=id;
+            this.name=name;
+        }
+        myStudent=new Student(102,"Akshit");
+        document.write(myStudent.id+"  "+myStudent.name);
+        document.write("<br>")
+        //JavaScript 
+        function employee(id,name){
+            this.id=id;
+            this.name=name;
+            //create property with same name as method name
+            this.changeId = changeId;
+            //Method
+            function changeId(newId){
+                this.id = newId;
+            }
+        }
+        myEmp=new employee(10001,"Akshit");
+        document.write(myEmp.id+"  "+myEmp.name);
+        document.write("<br>");
+        myEmp.changeId(10101);
+        document.write(myEmp.id+"  "+myEmp.name);
+        document.write("<br>");
+        //Array Literal
+        var Studentnames = ["Akshit", "Adarsh", "Daksh"];
+        for(var i=0; i < Studentnames.length; i++){
+            document.write(Studentnames[i]+ "<br>");
+        }
+        //Array Directly
+        var cities = new Array();
+        cities[0] = "Nagpur";
+        cities[1] = "Pune";
+        cities[2] = "Mumbai";
+        for(var i=0; i<cities.length; i++){
+            document.write(cities[i]+ "<br>");
+        }
+        //Array Constructor
+        var fruits = new Array("Apple", "Orange", "Banana");
+        var fruits1 = fruits.entries();
+        for(var i of fruits1){
+            document.write(i+"<br>");
+        }
+        //Array Method
+        var arr=['a','b',['c','d']]; //given 2D array  
+        var newArr=arr.flat(); //using flat() method  
+        document.write("After flattening the array:  "+newArr+"<br>");  
+        document.write(fruits.pop()+"<br>");
+        document.write(fruits.reverse());
+        document.write("<br>");
+        var arr=Array.from("vennugopaliyer"); //The string will get converted to an array.  
+        document.write("The resultant is: <br>" +arr);  
+        document.write("<br>");
+        //JavaScript string object by string literal 
+        var n = "OaeaoaooOaeaoaoo"
+        //Javascript string obeject by using a new keyword
+        var m = new String("<br> THIS IS MY FIRST STRING")
+        document.write(n)
+        document.write(m)
+        document.write("<br>"+n.charAt(3))
+        var web="Learn apply";  
+        document.write("<br>"+web.lastIndexOf('a'));  
+        var str="mobbin through the club in a low pressin i am sitting in the back in the smokin section birds eye i got clear view you can't see me but i can see you";  
+        document.writeln("<br>"+str.match("in")); 
+        document.write(m.toLowerCase()+"<br>") 
+        document.writeln(m.slice(6,12))
+    </script>
+    <br><button onclick="alert(getSquare(5))">GetSquare</button>
+</body>
+</html>

@@ -23,11 +23,13 @@ function ifunc()
     }
 }
 
-function declare(){
+function declare()
+{
     window.value = 100
 }
 
-function print(){
+function print()
+{
     alert(window.value)
 }
 
@@ -55,4 +57,7 @@ function pattern1()
         }
         document.write('<br>')
     }
+}
+function getSquare(n){
+    return n*n;
 }
