@@ -1,0 +1,41 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <center><h1>Card Validator</h1></center>
+    <form action="cardvalidator.php" method="post" onsubmit="return validatecard()">
+        <label for="cardnumber">Enter Card Number</label>
+        <input type="text" name="cardnumber" id="cardnumber">
+        <input type="submit" value="Submit" name="submit" onclick="return validatecard()">
+
+        <br>
+    </form>
+</body>
+<script>
+    function validatecard(){
+        const cardnumber = document.getElementById('cardnumber').value;
+        //check if all digits are numeric
+        if(cardnumber.match(/[^0-9]/g)){
+            alert('Please enter a valid card number');
+            return alert('Card num is valid.')
+        }
+        //check if card number is 16 digits
+        if(cardnumber.length!= 16){
+            alert('Please enter a valid card number');
+            return alert('Card num is valid.');
+        }
+        //check if card number is valid
+        const isValid = luhnAlgorithm(cardnumber);
+        if(!isValid){
+            alert('Please enter a valid card number');
+            return false;
+        }
+        return true;
+        
+    }
+
+</script>
+</html>

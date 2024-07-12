@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Registration Form</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: bisque;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            margin: 0;
+            background-image: url(https://cdn.pixabay.com/photo/2017/10/31/19/05/web-design-2906159_1280.jpg);
+        }
+        form {
+            background-color: burlywood;
+            padding: 20px;
+            border-radius: 8px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            width: 300px;
+        }
+        h2 {
+            margin-bottom: 20px;
+            color: black;
+            text-align: center;
+        }
+        input[type="text"], input[type="password"] {
+            width: calc(100% - 20px);
+            padding: 10px;
+            margin-bottom: 15px;
+            border: 1px solid #ccc;
+            border-radius: 4px;
+        }
+        input[type="submit"], input[type="button"] {
+            width: calc(50% - 10px);
+            padding: 10px;
+            margin: 5px;
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
+            color: #fff;
+        }
+        input[type="submit"] {
+            background-color: #4CAF50;
+        }
+        input[type="button"] {
+            background-color: #f44336;
+        }
+        input[type="submit"]:hover, input[type="button"]:hover {
+            opacity: 0.9;
+        }
+    </style>
+    <script>
+        function valid(){
+            var x = document.getElementById("userid").value;
+            var y = document.getElementById("password").value;
+            var z = document.getElementById("cpassword").value;
+            if(x == "" || y == "" || z == ""){
+                alert("Please fill all fields");
+                return false;
+            }
+            if(y != z){
+                alert("Passwords do not match");
+                return false;
+            }
+            if(y==z){
+                alert("Registered Successfully");
+                return false;
+            }    
+            return true;
+            
+        }
+        function resetForm(){
+            document.getElementById("userid").value = "";
+            document.getElementById("password").value = "";
+            document.getElementById("cpassword").value = "";
+        }
+    </script>
+</head>
+<body>
+    <div style="border: black solid 1px; background-color: white; border-radius: 10px; box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);">
+    <form onsubmit="valid()">
+        <h2>Registration Form</h2>
+        <input type="text" id="userid" placeholder="User Id"> <br>
+        <input type="password" id="password" placeholder="Password"> <br>
+        <input type="password" id="cpassword" placeholder="Confirm Password"> <br>
+        <input type="submit" value="Submit">
+        <input type="button" value="Reset" onclick="resetForm()">
+    </form>
+    </div>
+</body>
+</html>

@@ -1,0 +1,37 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <p id="demo"></p>
+    <script>
+        // function product(a,b){
+        //     return a*b;
+        // }
+    
+        // function showresult(){
+        //     let x = prompt("Enter first number",0);
+        //     let y = prompt("Enter second number",0);
+        //     alert(product(x,y));
+        // // }
+        // function showData(name, amt) {  
+        //     alert(' Hello ' + name + '\n Your entered amount is ' + amt);  
+        // }  
+  
+        // function getData(callback) {  
+        //     var name = prompt(" Welcome to the javaTpoint.com \n What is your name?");  
+        //     var amt = prompt(" Enter some amount...");  
+        //     callback(name, amt); 
+        // }  
+        // getData(showData);  
+        setInterval(function(){
+            let d = new Date();
+            document.getElementById("demo").innerHTML = d.getHours() + ":" + d.getMinutes() + ":" + d.getSeconds();
+        }, 1000); //2000
+    </script>
+    <input type="button" value="Show Result" onclick="showresult()">
+    
+</body>
+</html>
